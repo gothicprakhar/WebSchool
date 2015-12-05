@@ -133,6 +133,7 @@ header {
   margin-left: 300px;
 }
 </style>
+@yield('page_head')
 </head>
 <body>
    <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
@@ -147,9 +148,14 @@ header {
       </ul>
    </nav>
     <div id="page-content">
+     <div class="container">
+    @yield('page_content')
+</div>
+        <div class"page_footer">
 
-    @yield('pagecontent')
-
+        @yield('page_footer')
+        </div>
     </div>
+
     </body>
 </html>

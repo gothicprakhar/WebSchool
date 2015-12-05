@@ -1,6 +1,6 @@
 @extends('templates.dashboard')
 
-@section('pagecontent')
+@section('page_content')
 <div >
       <p>Homepage Content</p>
    </div>
