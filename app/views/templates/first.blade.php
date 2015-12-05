@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -34,15 +33,68 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-red.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 @yield('page_head')
 </head>
 <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" >
+
+        <header class="mdl-layout__header" style="background-color: #263238;">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title ">Connectify</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. -->
+          <nav class="mdl-navigation" style="padding-top: 1.3em;">
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >notifications</i></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >flag</i></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >person</i></a>
+          </nav>
+        </div>
+      </header>
+
+        <div class="mdl-layout__drawer">
+
+        <span class="mdl-layout-title"> <i>admin</i></span>
+
+        <nav class="mdl-navigation " >
+
+            <!-- copy this -->
+         <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;">airplay</i><span style="margin-left: 2.5em;">Dashboard </span> </a>
+
+
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >school</i>&nbsp;&nbsp;  Students</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >person</i>&nbsp;&nbsp; Parents</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >dvr</i>&nbsp;&nbsp; Teacher</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >group</i>&nbsp;&nbsp; User</a>
+
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >subject</i>&nbsp;&nbsp; Subjects</a>
+
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >grade</i>&nbsp;&nbsp; Grade</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >description</i>&nbsp;&nbsp;  Exam</a>
+        </nav>
+      </div>
+             <main class="mdl-layout__content mdl-color--grey-100">
            @yield('page_content')
-            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            </main>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+            $(function(){
+
+  $('form.material').materialForm();
+
+  $('form').validate({
+    errorPlacement: function(error, element) {}
+  });
+
+});
+</script>
             @yield('page_footer')
     </div>
 </body>

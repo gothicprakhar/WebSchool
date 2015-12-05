@@ -19,6 +19,10 @@ Route::get('/dashboard', function()
 {
 	return View::make('pages.dashboard');
 });
+Route::get('/student', function()
+{
+	return View::make('pages.student');
+});
 Route::get('/mam', array('as' => 'profile', function()
 {
     return View::make('hello');
