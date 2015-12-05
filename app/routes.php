@@ -15,9 +15,9 @@ Route::get('/',  function()
 {
 	return View::make('hello');
 });
-Route::get('/foo', function()
+Route::get('/dashboard', function()
 {
-	return View::make('home');
+	return View::make('pages.dashboard');
 });
 Route::get('/mam', array('as' => 'profile', function()
 {
