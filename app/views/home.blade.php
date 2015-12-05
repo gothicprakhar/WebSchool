@@ -1,5 +1,7 @@
-@include('templates.dashboard')
-<div id="page-content">
-      <p>Page Content</p>
+@extends('templates.dashboard')
+
+@section('pagecontent')
+<div >
+      <p>Homepage Content</p>
    </div>
-</body>
+@stop

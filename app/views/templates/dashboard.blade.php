@@ -146,3 +146,10 @@ header {
           <li><a href="{{url('welcome')}}">Menu Item</a></li>
       </ul>
    </nav>
+    <div id="page-content">
+
+    @yield('pagecontent')
+
+    </div>
+    </body>
+</html>
