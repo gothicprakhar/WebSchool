@@ -97,7 +97,6 @@ header {
 #drawer-toggle:checked ~ #drawer-toggle-label {
   height: 100%;
   width: calc(100% - 300px);
-  background: rgba(255, 255, 255, .8);
 }
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
@@ -117,7 +116,6 @@ header {
 #drawer-toggle:checked ~ #drawer-toggle-label {
   height: 100%;
   width: calc(100% - 300px);
-  background: rgba(255, 255, 255, .8);
 }
 
 #drawer-toggle:checked ~ #drawer-toggle-label,
@@ -132,6 +130,32 @@ header {
 #drawer-toggle:checked ~ #page-content {
   margin-left: 300px;
 }
+#sidebar{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    #sidebar li {
+        margin: 0;
+    }
+#sidebar li a {
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #C9223D;
+        -webkit-transition:  background 0.3s ease-in-out;
+        -moz-transition:  background 0.3s ease-in-out;
+        -ms-transition:  background 0.3s ease-in-out;
+        -o-transition:  background 0.3s ease-in-out;
+        transition:  background 0.3s ease-in-out;
+    }
+     #sidebar ul li:hover a {
+        background: #C9223D;
+    }
+
 </style>
 @yield('page_head')
 </head>
@@ -139,14 +163,18 @@ header {
    <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
    <label for="drawer-toggle" id="drawer-toggle-label"></label>
    <header>Header</header>
-   <nav id="drawer">
-      <ul>
-          <li><a href="{{URL::route('profile')}}">Menu Item</a></li>
-          <li><a href="{{url('welcome')}}">Menu Item</a></li>
-          <li><a href="{{url('welcome')}}">Menu Item</a></li>
-          <li><a href="{{url('welcome')}}">Menu Item</a></li>
+   <div id="drawer">
+       <div style="height: 100px; margin-top: 4em;background-color: aqua;">
+
+
+       </div>
+      <ul id="sidebar">
+          <li><a href="{{URL::route('profile')}}">Menu Item 1</a></li>
+          <li><a href="{{url('welcome')}}">Menu Item 2</a></li>
+          <li><a href="{{url('welcome')}}">Menu Item 3</a></li>
+          <li><a href="{{url('welcome')}}">Menu Item 4</a></li>
       </ul>
-   </nav>
+   </div>
     <div id="page-content">
      <div class="container">
     @yield('page_content')
