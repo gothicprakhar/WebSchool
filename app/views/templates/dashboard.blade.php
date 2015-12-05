@@ -170,7 +170,7 @@ header {
        </div>
       <ul id="sidebar">
           <li><a href="{{URL::route('profile')}}">Menu Item 1</a></li>
-          <li><a href="{{url('welcome')}}">Menu Item 2</a></li>
+          <li><a href="{{url('welcome')}}">Menu Item 5</a></li>
           <li><a href="{{url('welcome')}}">Menu Item 3</a></li>
           <li><a href="{{url('welcome')}}">Menu Item 4</a></li>
       </ul>
