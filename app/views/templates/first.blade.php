@@ -59,26 +59,43 @@
 
         <div class="mdl-layout__drawer">
 
-        <span class="mdl-layout-title"> <i>admin</i></span>
+        <span class="mdl-layout-title mdl-color--blue-grey-600" style="height: 6em;">  <a class="mdl-navigation__link" ></a>
+
+            <span class="mdl-color-text--white">Admin</span>
+            <span class="mdl-color-text--white"><small>abc@gmail.com</small> </span>
+            <span class="mdl-color-text--white"><small>9858000000</small> </span>
+
+            <div class="section__circle-container__circle mdl-color--accent" style="width: 64px;height: 64px;border-radius: 32px; margin-left:-1.5em; margin-top: 0.5em;"></div>
+            </span>
+
 
         <nav class="mdl-navigation " >
 
-            <!-- copy this -->
          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;">airplay</i><span style="margin-left: 2.5em;">Dashboard </span> </a>
 
 
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >school</i>&nbsp;&nbsp;  Students</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >person</i>&nbsp;&nbsp; Parents</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >dvr</i>&nbsp;&nbsp; Teacher</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >group</i>&nbsp;&nbsp; User</a>
+          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >school</i><span style="margin-left: 2.5em;">Students</span> </a>
 
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >kitchen</i>&nbsp;&nbsp;  Section</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >subject</i>&nbsp;&nbsp; Subjects</a>
 
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >grade</i>&nbsp;&nbsp; Grade</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >description</i>&nbsp;&nbsp;  Exam</a>
+          <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >person</i><span style="margin-left: 2.5em;"> Parents</span> </a>
+
+
+          <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >dvr</i><span style="margin-left: 2.5em;"> Teacher</span> </a>
+
+
+            <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >group</i><span style="margin-left: 2.5em;"> User</span> </a>
+
+
+          <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >kitchen</i><span style="margin-left: 2.5em;">  Section</span> </a>
+
+         <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >subject</i><span style="margin-left: 2.5em;"> Subject</span> </a>
+
+          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >grade</i><span style="margin-left: 2.5em;"> Grade</span> </a>
+
+
+          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >description</i><span style="margin-left: 2.5em;">Exam</span> </a>
+
+
         </nav>
       </div>
              <main class="mdl-layout__content mdl-color--grey-100">

@@ -40,7 +40,7 @@
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
 
-                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
+                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.2em;">
                                   <tr>
                                     <th>No <hr></th>
                                     <th>Photo <hr></th>
@@ -56,9 +56,10 @@
                                     <td>$100 <hr></td>
 
                                     <td>
-                                    <button class="btn btn-sm btn-primary" style="font-size: 0.65em;"><span class="glyphicon glyphicon-file"></span></button>
-                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button>
+
+                                    <i class="material-icons" style="font-size: 1.2em;">launch</i>
+                                    <i class="material-icons" style="font-size: 1.2em;">launch</i>
+                                    <i class="material-icons" style="font-size: 1.2em;">launch</i>
                                     <hr> </td>
 
                                   </tr>

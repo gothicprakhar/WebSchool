@@ -2,6 +2,7 @@
 @section('page_head')
 <title>Dashboard</title>
     <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/panel.css" rel="stylesheet">
 @stop
 
 @section('page_content')
@@ -19,8 +20,8 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;">
-  One &nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;"> <span class="mdl-cell--hide-phone ">SELECT</span> CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="demo-menu-lower-right">
                               <li class="mdl-menu__item">One</li>
@@ -34,60 +35,81 @@
 
                               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
                               &nbsp; &nbsp;<i class="material-icons">add</i>
                             </button>
+                                  <div class="mdl-tooltip" for="tt1">
+                                Add a student
+                                </div>
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
-
-                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.3em;">
+                                          <br><br>
+                                          <i>Please choose a class to view students.</i>
+                               <table  style="width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;" rules="rows" cellspacing="60">
                                   <tr>
-                                    <th>No <hr></th>
-                                    <th>Photo <hr></th>
-                                    <th>Name <hr></th>
-                                    <th>Roll No <hr></th>
-                                    <th>Phone <hr></th>
-                                    <th >Action <hr></th>
+                                    <th class="hide-mobile">No </th>
+                                    <th>Photo </th>
+                                    <th>Name </th>
+                                    <th>Roll No </th>
+                                    <th class="hide-mobile">Phone </th>
+                                    <th >Action </th>
                                 </tr>
                                   <tr >
-                                    <td>1 <hr></td>
-                                    <td>$100 <hr></td>
-                                    <td>Lorem Ipsum <hr></td>
-                                    <td>100 <hr></td>
-                                    <td>9090900100 <hr></td>
+                                    <td class="hide-mobile">1 </td>
                                     <td>
-                                    <button class="btn btn-sm btn-primary" style="font-size: 0.7em;"><span class="glyphicon glyphicon-file"></span></button>
-                                    <button class="btn btn-sm btn-warning" style="font-size: 0.7em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.7em;"><span class="glyphicon glyphicon-trash"></span></button>
-                                    <hr> </td>
+                                      <div class="section__circle-container__circle mdl-color--primary">
+                    </div>
+                                      </td>
+                                    <td>Lorem Ipsum</td>
+                                    <td>100 </td>
+                                    <td class="hide-mobile">9090900100 </td>
+                                    <td>
+                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch </i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">mode_edit </i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">delete</i>
+
+                                     </td>
+                                  </tr>
+
+                                   <tr >
+                                    <td class="hide-mobile">1 </td>
+                                    <td>$100 </td>
+                                    <td>Lorem Ipsum </td>
+                                    <td>100 </td>
+                                    <td class="hide-mobile">9090900100 </td>
+                                    <td>
+                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                    </td>
 
                                   </tr>
 
-                                   <tr>
-                                    <td>2 <hr></td>
-                                    <td>$100 <hr></td>
-                                      <td>January <hr></td>
-                                    <td>$100 <hr></td>
-                                    <td>$100 <hr></td>
-                                    <td>$100 <hr></td>
+                                    <tr >
+                                    <td class="hide-mobile">1 </td>
+                                    <td>$100 </td>
+                                    <td>Lorem Ipsum </td>
+                                    <td>100 </td>
+                                    <td class="hide-mobile">9090900100 </td>
+                                    <td>
+                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                    </td>
 
                                   </tr>
+                                    <tr >
+                                    <td class="hide-mobile">1 </td>
+                                    <td>$100 </td>
+                                    <td>Lorem Ipsum </td>
+                                    <td>100 </td>
+                                    <td class="hide-mobile">9090900100 </td>
+                                    <td>
+                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                    </td>
 
-                                   <tr>
-                                    <td>3</td>
-                                    <td>$100</td>
-                                      <td>January</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
-                                  </tr>
-                                   <tr>
-                                    <td>4</td>
-                                    <td>$100</td>
-                                      <td>January</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
                                   </tr>
                                 </table>
 
@@ -103,7 +125,7 @@
 
                           <div class="mdl-card__menu">
                               <form action="#">
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" >
                                 <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
                                   <i class="material-icons">search</i>
                                 </label>
@@ -127,6 +149,9 @@
 @stop
 
 @section('page_footer')
-    <script type="text/javascript">
+    <script>
+        $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
     </script>
 @stop

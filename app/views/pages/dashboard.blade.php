@@ -63,21 +63,22 @@
                 <h4 class="mdl-cell mdl-cell--12-col"><br>NOTICE</h4>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                   <div class="section__circle-container__circle mdl-color--primary">
-                   <i class="mdl-color-text--blue-grey-400  material-icons" role="presentation">all_out</i> </div>
+                   <i class="mdl-color-text--white  material-icons" style="margin-left: 0.65em; margin-top:0.65em;">open_with</i>
+                    </div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
                   Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.<hr style="margin-bottom: -1em;">
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                  <div class="section__circle-container__circle mdl-color--primary"> <i class="mdl-color-text--white  material-icons" style="margin-left: 0.65em; margin-top:0.65em;">open_with</i></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lore ipsum dolor sit amet</h5>
                   Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.<hr style="margin-bottom: -1em;">
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                  <div class="section__circle-container__circle mdl-color--primary"> <i class="mdl-color-text--white  material-icons" style="margin-left: 0.65em; margin-top:0.65em;">open_with</i></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>

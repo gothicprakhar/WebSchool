@@ -27,6 +27,125 @@
   color: #fff;
 }
 
+
+
+.teacher-card-wide.mdl-card {
+  width: 100%;
+}
+.teacher-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #00BBD6 center / cover;
+  background-color: #00BBD6;
+}
+.teacher-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.teacher-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.parent-card-wide.mdl-card {
+  width: 100%;
+}
+.parent-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #BA65C9 center / cover;
+  background-color: #BA65C9;
+}
+.parent-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.parent-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.exam-card-wide.mdl-card {
+  width: 100%;
+}
+.exam-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #00BBD6 center / cover;
+  background-color: #00BBD6;
+}
+.exam-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.exam-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.section-card-wide.mdl-card {
+  width: 100%;
+}
+.section-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #0091EA center / cover;
+  background-color: #0091EA;
+}
+.section-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.section-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.user-card-wide.mdl-card {
+  width: 100%;
+}
+.user-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #512DA8 center / cover;
+  background-color: #512DA8;
+}
+.user-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.user-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.subject-card-wide.mdl-card {
+  width: 100%;
+}
+.subject-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #C62828 center / cover;
+  background-color: #C62828;
+}
+.subject-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.subject-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .count-box {
     border: 0.1px solid #fff;
     padding-left: 1em;
@@ -89,6 +208,7 @@
   height: 54px;
   border-radius: 27px;
 }
+
 
 .section__circle-container {
     padding-top: 2.5em;
