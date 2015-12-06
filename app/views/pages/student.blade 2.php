@@ -19,7 +19,7 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;">
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;">
   One &nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="demo-menu-lower-right">
@@ -40,7 +40,7 @@
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
 
-                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.3em;">
+                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
                                   <tr>
                                     <th>No <hr></th>
                                     <th>Photo <hr></th>
@@ -52,13 +52,13 @@
                                   <tr >
                                     <td>1 <hr></td>
                                     <td>$100 <hr></td>
-                                    <td>Lorem Ipsum <hr></td>
-                                    <td>100 <hr></td>
-                                    <td>9090900100 <hr></td>
+                                      <td>January <hr></td>
+                                    <td>$100 <hr></td>
+                                    <td>$100 <hr></td>
                                     <td>
-                                    <button class="btn btn-sm btn-primary" style="font-size: 0.7em;"><span class="glyphicon glyphicon-file"></span></button>
-                                    <button class="btn btn-sm btn-warning" style="font-size: 0.7em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.7em;"><span class="glyphicon glyphicon-trash"></span></button>
+                                    <button class="btn btn-sm btn-primary" style="font-size: 0.65em;"><span class="glyphicon glyphicon-file"></span></button>
+                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button>
                                     <hr> </td>
 
                                   </tr>
@@ -69,17 +69,21 @@
                                       <td>January <hr></td>
                                     <td>$100 <hr></td>
                                     <td>$100 <hr></td>
-                                    <td>$100 <hr></td>
+                                    <td><button class="btn btn-sm btn-primary" style="font-size: 0.65em;"><span class="glyphicon glyphicon-file"></span></button>
+                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
 
                                   </tr>
 
                                    <tr>
-                                    <td>3</td>
-                                    <td>$100</td>
-                                      <td>January</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
+                                    <td>3<hr></td>
+                                    <td>$100<hr></td>
+                                      <td>January<hr></td>
+                                    <td>$100<hr></td>
+                                    <td>$100<hr></td>
+                                    <td><button class="btn btn-sm btn-primary" style="font-size: 0.65em;"><span class="glyphicon glyphicon-file"></span></button>
+                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
                                   </tr>
                                    <tr>
                                     <td>4</td>
@@ -87,7 +91,9 @@
                                       <td>January</td>
                                     <td>$100</td>
                                     <td>$100</td>
-                                    <td>$100</td>
+                                    <td><button class="btn btn-sm btn-primary" style="font-size: 0.65em;"><span class="glyphicon glyphicon-file"></span></button>
+                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button></td>
                                   </tr>
                                 </table>
 

@@ -15,7 +15,7 @@
                            <div class="mdl-card__title" style="z-index: 0;">
                                <!-- Colored FAB button with ripple -->
 
-                               <h2 class="mdl-card__title-text"><i class="material-icons" style="margin-left: 3em;">school</i>&nbsp;Students</h2>
+                               <h2 class="mdl-card__title-text"><i class="material-icons" style="margin-left: 3em;">grade</i>&nbsp;Grade</h2>
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
@@ -40,26 +40,27 @@
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
 
-                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.3em;">
+                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
                                   <tr>
                                     <th>No <hr></th>
-                                    <th>Photo <hr></th>
-                                    <th>Name <hr></th>
-                                    <th>Roll No <hr></th>
-                                    <th>Phone <hr></th>
+                                    <th>Grade Name<hr></th>
+                                    <th>Grade Point<hr></th>
+                                    <th>Mark Form<hr></th>
+                                    <th>Mark Upto<hr></th>
+                                    <th>Note<hr></th>
                                     <th >Action <hr></th>
                                 </tr>
                                   <tr >
                                     <td>1 <hr></td>
-                                    <td>$100 <hr></td>
-                                    <td>Lorem Ipsum <hr></td>
+                                    <td>A+<hr></td>
+                                      <td>5 <hr></td>
+                                    <td>80<hr></td>
                                     <td>100 <hr></td>
-                                    <td>9090900100 <hr></td>
+                                      <td>A Plus<hr></td>
                                     <td>
-                                    <button class="btn btn-sm btn-primary" style="font-size: 0.7em;"><span class="glyphicon glyphicon-file"></span></button>
-                                    <button class="btn btn-sm btn-warning" style="font-size: 0.7em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.7em;"><span class="glyphicon glyphicon-trash"></span></button>
-                                    <hr> </td>
+                                    <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button>
+                                    <hr></td>
 
                                   </tr>
 
@@ -69,17 +70,21 @@
                                       <td>January <hr></td>
                                     <td>$100 <hr></td>
                                     <td>$100 <hr></td>
-                                    <td>$100 <hr></td>
+                                       <td>A Plus<hr></td>
+                                  <td>  <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
 
                                   </tr>
 
                                    <tr>
-                                    <td>3</td>
-                                    <td>$100</td>
-                                      <td>January</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
-                                    <td>$100</td>
+                                    <td>3<hr></td>
+                                    <td>$100<hr></td>
+                                      <td>January<hr></td>
+                                    <td>$100<hr></td>
+                                    <td>$100<hr></td>
+                                       <td>A Plus<hr></td>
+                               <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
                                   </tr>
                                    <tr>
                                     <td>4</td>
@@ -87,7 +92,9 @@
                                       <td>January</td>
                                     <td>$100</td>
                                     <td>$100</td>
-                                    <td>$100</td>
+                                       <td>A Plus<hr></td>
+                                  <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button></td>
                                   </tr>
                                 </table>
 

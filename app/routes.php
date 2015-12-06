@@ -23,6 +23,34 @@ Route::get('/student', function()
 {
 	return View::make('pages.student');
 });
+Route::get('/teacher', function()
+{
+	return View::make('pages.teacher');
+});
+Route::get('/user', function()
+{
+	return View::make('pages.user');
+});
+Route::get('/exam', function()
+{
+	return View::make('pages.exam');
+});
+Route::get('/grade', function()
+{
+	return View::make('pages.grade');
+});
+Route::get('/parent', function()
+{
+	return View::make('pages.parent');
+});
+Route::get('/section', function()
+{
+	return View::make('pages.section');
+});
+Route::get('/subject', function()
+{
+	return View::make('pages.subject');
+});
 Route::get('/mam', array('as' => 'profile', function()
 {
     return View::make('hello');

@@ -50,9 +50,9 @@
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. -->
           <nav class="mdl-navigation" style="padding-top: 1.3em;">
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >notifications</i></a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >flag</i></a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation" >person</i></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-100 material-icons" role="presentation" >notifications</i></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-100 material-icons" role="presentation" >flag</i></a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-100 material-icons" role="presentation" >person</i></a>
           </nav>
         </div>
       </header>
