@@ -2,6 +2,7 @@
 @section('page_head')
 <title>Dashboard</title>
     <link href="./assets/css/dashboard.css" rel="stylesheet">
+<link href="./assets/css/panel.css" rel="stylesheet">
 @stop
 
 @section('page_content')
@@ -46,49 +47,49 @@
 
                                <table  style="width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;" rules="rows" cellspacing="60">
                                   <tr>
-                                    <th class="hide-mobile">No <hr></th>
-                                    <th>Grade Name<hr></th>
-                                    <th>Grade Point<hr></th>
-                                    <th>Mark Form<hr></th>
-                                    <th>Mark Upto<hr></th>
-                                    <th class="hide-mobile">Note<hr></th>
-                                    <th >Action <hr></th>
+                                    <th class="hide-mobile">No  </th>
+                                    <th>Grade Name </th>
+                                    <th>Grade Point </th>
+                                    <th>Mark Form </th>
+                                    <th>Mark Upto </th>
+                                    <th class="hide-mobile">Note </th>
+                                    <th >Action  </th>
                                 </tr>
                                   <tr >
-                                    <td class="hide-mobile">1 <hr></td>
-                                    <td>A+<hr></td>
-                                      <td>5 <hr></td>
-                                    <td>80<hr></td>
-                                    <td>100 <hr></td>
-                                      <td class="hide-mobile">A Plus<hr></td>
+                                    <td class="hide-mobile">1  </td>
+                                    <td>A+ </td>
+                                      <td>5  </td>
+                                    <td>80 </td>
+                                    <td>100  </td>
+                                      <td class="hide-mobile">A Plus </td>
                                     <td>
                                     <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button>
-                                    <hr></td>
+                                     </td>
 
                                   </tr>
 
                                    <tr>
-                                    <td class="hide-mobile">2 <hr></td>
-                                    <td>$100 <hr></td>
-                                      <td>January <hr></td>
-                                    <td>$100 <hr></td>
-                                    <td>$100 <hr></td>
-                                       <td class="hide-mobile">A Plus<hr></td>
+                                    <td class="hide-mobile">2  </td>
+                                    <td>$100  </td>
+                                      <td>January  </td>
+                                    <td>$100  </td>
+                                    <td>$100  </td>
+                                       <td class="hide-mobile">A Plus </td>
                                   <td>  <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button> </td>
 
                                   </tr>
 
                                    <tr>
-                                    <td class="hide-mobile">3<hr></td>
-                                    <td>$100<hr></td>
-                                      <td>January<hr></td>
-                                    <td>$100<hr></td>
-                                    <td>$100<hr></td>
-                                       <td class="hide-mobile">A Plus<hr></td>
+                                    <td class="hide-mobile">3 </td>
+                                    <td>$100 </td>
+                                      <td>January </td>
+                                    <td>$100 </td>
+                                    <td>$100 </td>
+                                       <td class="hide-mobile">A Plus </td>
                                <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
+                                    <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button> </td>
                                   </tr>
                                    <tr>
                                     <td class="hide-mobile">4</td>
@@ -96,7 +97,7 @@
                                       <td>January</td>
                                     <td>$100</td>
                                     <td>$100</td>
-                                       <td class="hide-mobile">A Plus<hr></td>
+                                       <td class="hide-mobile">A Plus </td>
                                   <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button></td>
                                   </tr>

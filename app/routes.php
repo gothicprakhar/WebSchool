@@ -15,10 +15,15 @@ Route::get('/',  function()
 {
 	return View::make('hello');
 });
-Route::get('/dashboard', function()
-{
-	return View::make('pages.dashboard');
-});
+Route::get('/dashboard',array('as' =>'dashboard','uses'=>'HomeController@showdashboard'));
+Route::get('/student',array('as' =>'student','uses' =>'StudentController@showstudent'));
+Route::get('/teacher',array('as' =>'teacher','uses' =>'TeacherController@showteacher'));
+Route::get('/parent',array('as' =>'parent','uses' => 'ParentController@showparent'));
+Route::get('/user',array('as' =>'user','uses' => 'UserController@showuser'));
+Route::get('/subject',array('as' =>'subject','uses' => 'SubjectController@showsubject'));
+Route::get('/grade',array('as' =>'grade','uses' => 'GradeController@showgrade'));
+Route::get('/exam',array('as' =>'exam','uses' => 'ExamController@showexam'));
+
 Route::get('/student', function()
 {
 	return View::make('pages.student');

@@ -2,6 +2,7 @@
 @section('page_head')
 <title>Dashboard</title>
     <link href="./assets/css/dashboard.css" rel="stylesheet">
+<link href="./assets/css/panel.css" rel="stylesheet">
 @stop
 
 @section('page_content')

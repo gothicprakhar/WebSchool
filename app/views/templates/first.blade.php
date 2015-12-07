@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+     <link href="./assets/css/dashboard.css" rel="stylesheet">
 @yield('page_head')
 </head>
 <body>
@@ -46,41 +47,42 @@
 
         <div class="mdl-layout__drawer">
 
-        <span class="mdl-layout-title mdl-color--blue-grey-600" style="height: 6em;">  <a class="mdl-navigation__link" ></a>
+        <span class="mdl-layout-title mdl-color--blue-grey-600" style="height: 6em; padding-top: 1em;">  <a class="mdl-navigation__link" ></a>
 
-            <span class="mdl-color-text--white">Admin</span>
-            <span class="mdl-color-text--white"><small>abc@gmail.com</small> </span>
-            <span class="mdl-color-text--white"><small>9858000000</small> </span>
 
-            <div class="section__circle-container__circle mdl-color--accent" style="width: 64px;height: 64px;border-radius: 32px; margin-left:-1.5em; margin-top: 0.5em;"></div>
+            <p class="mdl-color-text--white" style="font-size: 0.7em; margin-left: -0.7em; margin-bottom: 0.3em;"><i>gothic.abc@gmail.com<br>
+         9858000000 </i></p>
+
+            <div class="section__circle-container__circle mdl-color--accent" style="width: 64px;height: 64px;border-radius: 32px; margin-left: -0.7em; position: absolute;"></div>
+            <span class="mdl-color-text--white" style="margin-left: 3.5em;">Admin</span>
             </span>
 
 
         <nav class="mdl-navigation " >
 
-         <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;">airplay</i><span style="margin-left: 2.5em;">Dashboard </span> </a>
+         <a class="mdl-navigation__link" href="{{URL::route('dashboard')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;">airplay</i><span style="margin-left: 2.5em;">Dashboard </span> </a>
+          <a class="mdl-navigation__link" href="{{URL::route('teacher')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >dvr</i><span style="margin-left: 2.5em;"> Teacher</span> </a>
+
+          <a class="mdl-navigation__link" href="{{URL::route('student')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >school</i><span style="margin-left: 2.5em;">Students</span> </a>
 
 
-          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >school</i><span style="margin-left: 2.5em;">Students</span> </a>
+          <a class="mdl-navigation__link" href="{{URL::route('parent')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >person</i><span style="margin-left: 2.5em;"> Parents</span> </a>
 
 
-          <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >person</i><span style="margin-left: 2.5em;"> Parents</span> </a>
 
 
-          <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >dvr</i><span style="margin-left: 2.5em;"> Teacher</span> </a>
 
-
-            <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >group</i><span style="margin-left: 2.5em;"> User</span> </a>
+            <a class="mdl-navigation__link" href="{{URL::route('user')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >group</i><span style="margin-left: 2.5em;"> User</span> </a>
 
 
           <a class="mdl-navigation__link" href=""style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >kitchen</i><span style="margin-left: 2.5em;">  Section</span> </a>
 
-         <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >subject</i><span style="margin-left: 2.5em;"> Subject</span> </a>
+         <a class="mdl-navigation__link" href="{{URL::route('subject')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >subject</i><span style="margin-left: 2.5em;"> Subject</span> </a>
 
-          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >grade</i><span style="margin-left: 2.5em;"> Grade</span> </a>
+          <a class="mdl-navigation__link" href="{{URL::route('grade')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >grade</i><span style="margin-left: 2.5em;"> Grade</span> </a>
 
 
-          <a class="mdl-navigation__link" href="" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >description</i><span style="margin-left: 2.5em;">Exam</span> </a>
+          <a class="mdl-navigation__link" href="{{URL::route('exam')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >description</i><span style="margin-left: 2.5em;">Exam</span> </a>
 
 
         </nav>
