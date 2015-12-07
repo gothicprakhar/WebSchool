@@ -15,12 +15,4 @@ Route::get('/',  function()
 {
 	return View::make('hello');
 });
-Route::get('/foo', function()
-{
-	return View::make('home');
-});
-Route::get('/mam', array('as' => 'profile', function()
-{
-    return View::make('hello');
-   
-}));
+
