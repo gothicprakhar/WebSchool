@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="./assets/js/jquery-2.1.4.min.js"></script>
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
@@ -15,9 +15,6 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="./assets/js/bootstrap.min.js"></script>
-
-    <!-- JQuery -->
-    <script src="./assets/js/jquery-2.1.4.min.js"></script>
 
     <link rel="stylesheet" href="./assets/css/material.min.css">
     <script src="./assets/js/material.min.js"></script>
@@ -90,12 +87,6 @@
             </main>
             <script type="text/javascript" src="./assets/js/jquery-2.1.4.min.js">
             $(function(){
-
-  $('form.material').materialForm();
-
-  $('form').validate({
-    errorPlacement: function(error, element) {}
-  });
 
 });
 </script>

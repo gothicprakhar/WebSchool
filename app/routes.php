@@ -61,6 +61,7 @@ Route::get('/section',array(
     'uses' => 'SectionController@showSection'
 ));
 
+
 Route::get('/mam', array('as' => 'profile', function()
 {
     return View::make('hello');
@@ -98,7 +99,7 @@ Route::post('login', function () {
 });
 Route::get('/foo', function() {
     $user = User::find(1);
-    return $user;
+    return Auth::user()->collegeid;
 });
 Route::get('logout', array('as' => 'logout', function () {
     Auth::logout();
