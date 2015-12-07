@@ -73,41 +73,41 @@
 
                                    <tr >
                                     <td class="hide-mobile">1 </td>
-                                    <td>$100 </td>
+                                    <td><div class="section__circle-container__circle mdl-color--primary"> </td>
                                     <td>Lorem Ipsum </td>
                                     <td>100 </td>
                                     <td class="hide-mobile">9090900100 </td>
                                     <td>
-                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                   <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch </i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">mode_edit </i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">delete</i>
                                     </td>
 
                                   </tr>
 
                                     <tr >
                                     <td class="hide-mobile">1 </td>
-                                    <td>$100 </td>
+                                    <td><div class="section__circle-container__circle mdl-color--primary"></td>
                                     <td>Lorem Ipsum </td>
                                     <td>100 </td>
                                     <td class="hide-mobile">9090900100 </td>
                                     <td>
-                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch </i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">mode_edit </i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">delete</i>
                                     </td>
 
                                   </tr>
                                     <tr >
                                     <td class="hide-mobile">1 </td>
-                                    <td>$100 </td>
+                                    <td><div class="section__circle-container__circle mdl-color--primary"></td>
                                     <td>Lorem Ipsum </td>
                                     <td>100 </td>
                                     <td class="hide-mobile">9090900100 </td>
                                     <td>
-                                    <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">launch</i>
-                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">launch</i>
+                                <i class="material-icons mdl-color-text--green-400" style="font-size: 1.1em;">launch </i>
+                                    <i class="material-icons mdl-color-text--blue-400" style="font-size: 1.1em;">mode_edit </i>
+                                    <i class="material-icons mdl-color-text--red-400" style="font-size: 1.1em;">delete</i>
                                     </td>
 
                                   </tr>

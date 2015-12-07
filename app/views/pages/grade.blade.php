@@ -19,8 +19,7 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;">
-  One &nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+                              <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;"> <span class="mdl-cell--hide-phone ">SELECT</span> CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="demo-menu-lower-right">
                               <li class="mdl-menu__item">One</li>
@@ -34,29 +33,34 @@
 
                               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
                               &nbsp; &nbsp;<i class="material-icons">add</i>
                             </button>
+                                  <div class="mdl-tooltip" for="tt1">
+                                Add a student
+                                </div>
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
+                                          <br><br>
+                                          <i>Please choose a class to view students.</i>
 
-                               <table  style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
+                               <table  style="width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;" rules="rows" cellspacing="60">
                                   <tr>
-                                    <th>No <hr></th>
+                                    <th class="hide-mobile">No <hr></th>
                                     <th>Grade Name<hr></th>
                                     <th>Grade Point<hr></th>
                                     <th>Mark Form<hr></th>
                                     <th>Mark Upto<hr></th>
-                                    <th>Note<hr></th>
+                                    <th class="hide-mobile">Note<hr></th>
                                     <th >Action <hr></th>
                                 </tr>
                                   <tr >
-                                    <td>1 <hr></td>
+                                    <td class="hide-mobile">1 <hr></td>
                                     <td>A+<hr></td>
                                       <td>5 <hr></td>
                                     <td>80<hr></td>
                                     <td>100 <hr></td>
-                                      <td>A Plus<hr></td>
+                                      <td class="hide-mobile">A Plus<hr></td>
                                     <td>
                                     <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button>
@@ -65,34 +69,34 @@
                                   </tr>
 
                                    <tr>
-                                    <td>2 <hr></td>
+                                    <td class="hide-mobile">2 <hr></td>
                                     <td>$100 <hr></td>
                                       <td>January <hr></td>
                                     <td>$100 <hr></td>
                                     <td>$100 <hr></td>
-                                       <td>A Plus<hr></td>
+                                       <td class="hide-mobile">A Plus<hr></td>
                                   <td>  <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
 
                                   </tr>
 
                                    <tr>
-                                    <td>3<hr></td>
+                                    <td class="hide-mobile">3<hr></td>
                                     <td>$100<hr></td>
                                       <td>January<hr></td>
                                     <td>$100<hr></td>
                                     <td>$100<hr></td>
-                                       <td>A Plus<hr></td>
+                                       <td class="hide-mobile">A Plus<hr></td>
                                <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button><hr></td>
                                   </tr>
                                    <tr>
-                                    <td>4</td>
+                                    <td class="hide-mobile">4</td>
                                     <td>$100</td>
                                       <td>January</td>
                                     <td>$100</td>
                                     <td>$100</td>
-                                       <td>A Plus<hr></td>
+                                       <td class="hide-mobile">A Plus<hr></td>
                                   <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button></td>
                                   </tr>
@@ -134,6 +138,9 @@
 @stop
 
 @section('page_footer')
-    <script type="text/javascript">
+    <script>
+        $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
     </script>
 @stop
