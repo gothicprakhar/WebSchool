@@ -85,6 +85,20 @@ class StudentController extends \BaseController {
     public function showStudent()
 	{
         $data['flag'] = 0;
+
+        $colid = Auth::user()->collegeid;
+        $classes = Classes::where('collegeid', '=', $colid)->get();
+
+        $data['class'] = array();
+        $i = 0;
+        foreach($classes as $cl) {
+            $data['class'][$i]['id'] = $cl->id;
+            $data['class'][$i]['name'] = $cl->class_name;
+            $i++;
+        }
+
+        var_dump($data['class']);
+        die();
 		return View::make('pages.student', ['data' => $data]);
 	}
 

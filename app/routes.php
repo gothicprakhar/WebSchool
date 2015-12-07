@@ -61,6 +61,10 @@ Route::get('/section',array(
     'uses' => 'SectionController@showSection'
 ));
 
+Route::get('/abc', function() {
+    return View::make('pages.abc');
+});
+
 
 Route::get('/mam', array('as' => 'profile', function()
 {

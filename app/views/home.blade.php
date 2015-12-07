@@ -1,4 +1,4 @@
-@extends('templates.dashboard')
+@extends('templates.first')
 
 @section('page_content')
 <div >
