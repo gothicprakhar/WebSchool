@@ -19,5 +19,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
+    public function showDashboard()
+	{
+		return View::make('pages.dashboard');
+	}
 
 }

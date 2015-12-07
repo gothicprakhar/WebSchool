@@ -1,0 +1,218 @@
+.demo-card-wide.mdl-card {
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #02B2A7 center / cover;
+  background-color: #fff;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.student-card-wide.mdl-card {
+  width: 100%;
+}
+.student-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #ACEC00 center / cover;
+  background-color: #ACEC00;
+}
+.student-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.student-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+
+.teacher-card-wide.mdl-card {
+  width: 100%;
+}
+.teacher-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #00BBD6 center / cover;
+  background-color: #00BBD6;
+}
+.teacher-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.teacher-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.parent-card-wide.mdl-card {
+  width: 100%;
+}
+.parent-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #BA65C9 center / cover;
+  background-color: #BA65C9;
+}
+.parent-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.parent-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.exam-card-wide.mdl-card {
+  width: 100%;
+}
+.exam-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #00BBD6 center / cover;
+  background-color: #00BBD6;
+}
+.exam-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.exam-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.section-card-wide.mdl-card {
+  width: 100%;
+}
+.section-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #0091EA center / cover;
+  background-color: #0091EA;
+}
+.section-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.section-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.user-card-wide.mdl-card {
+  width: 100%;
+}
+.user-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #512DA8 center / cover;
+  background-color: #512DA8;
+}
+.user-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.user-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+.subject-card-wide.mdl-card {
+  width: 100%;
+}
+.subject-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #C62828 center / cover;
+  background-color: #C62828;
+}
+.subject-card-wide > .mdl-card__supporting-text {
+    width: 100%;
+}
+.subject-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.count-box {
+    border: 0.1px solid #fff;
+    padding-left: 1em;
+    color: #fff;
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    height: 10em;
+}
+
+.size-1 {
+    font-size: 1em;
+}
+
+.size-2 {
+    font-size: 2em;
+}
+
+.size-3 {
+    font-size: 30px;
+    font-size: !important;
+}
+
+.size-4 {
+    font-size: 4em;
+}
+
+.size-5 {
+    font-size: 5em;
+}
+.page-content {
+    padding: 1.5em;
+}
+
+.section__text {
+    -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  padding-top: 0px;
+}
+
+.mdl-card__actions {
+    margin: 0;
+  padding: 4px 40px;
+  color: inherit;
+    margin-top: 2em;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+
+
+
+.section__circle-container__circle {
+    width: 54px;
+  height: 54px;
+  border-radius: 27px;
+}
+
+
+.section__circle-container {
+    padding-top: 2.5em;
+    padding-left: 0.5em;
+}
+
+
