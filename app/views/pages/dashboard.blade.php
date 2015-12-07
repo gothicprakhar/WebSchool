@@ -48,7 +48,7 @@
                             <span class="glyphicon glyphicon-pencil" style="font-size: 4em; color: #fff; float: right; padding-top: 0.3em; padding-right: 0.3em;"></span>
 
                             <h1 class="mdl-card__title-text size-4" style="padding-top: 0.5em;">10</h1>
-                            <h2 class="mdl-card__title-text">Attendance</h2>
+                            <h2 class="mdl-card__title-text">Subjects</h2>
                 </div>
               </div>
           </div>
