@@ -3,7 +3,7 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Class extends Eloquent {
+class Classm extends Eloquent {
 
 	/**
 	 * The database table used by the model.
@@ -12,7 +12,6 @@ class Class extends Eloquent {
 	 */
 	protected $table = 'class';
     public $timestamps = false;
-
 
 	/**
 	 * The attributes excluded from the model's JSON form.

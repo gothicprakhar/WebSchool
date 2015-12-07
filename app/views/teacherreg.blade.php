@@ -5,9 +5,9 @@
     <title>Registration</title>
 </head>
 <body>
-    <h1>Admin Register</h1>
+    <h1>Teacher Register</h1>
 
-    {{ Form::open(array('url' => 'register','mathod'=>'post','files'=>true)) }}
+    {{ Form::open(array('url' => 'teacher','mathod'=>'post','files'=>true)) }}
 
         <p>Name :</p>
 
@@ -17,23 +17,6 @@
 
         <p>{{ Form::text('email') }}</p>
 
-        <p>Collage:</p>
-
-        <p>{{ Form::text('collegename') }}</p>
-
-        <p>ProfilePic :</p>
-
-        <p>{{ Form::file('profilepic') }}</p>
-
-        <p>Collageid :</p>
-
-        <p>{{ Form::text('collegeid') }}</p>
-
-
-        <p>Collagelogo :</p>
-
-        <p>{{ Form::file('collegelogo') }}</p>
-
         <p>Password :</p>
 
         <p>{{ Form::password('password') }}</p>
@@ -41,6 +24,13 @@
         <p>Confirm Password :</p>
 
         <p>{{ Form::password('cpassword') }}</p>
+         <p>PHONE :</p>
+
+        <p>{{ Form::password('phone') }}</p>
+
+        <p>ProfilePic :</p>
+
+        <p>{{ Form::file('profilepic') }}</p>
 
         <p>{{ Form::submit('Submit') }}</p>
 

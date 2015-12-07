@@ -1,6 +1,6 @@
 <?php
 
-class AdminController extends BaseController {
+class StudentController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -20,33 +20,38 @@ class AdminController extends BaseController {
 		return View::make('hello');
 	}
 
-    public function registeradmin()
+    public function registerStudent()
     {
-
         $input = Input::all();
+
         if (Input::hasFile('profilepic'))
         {
            $input['profilepic']= $this->filestore(Input::file('profilepic'));
         }
-        if (Input::hasFile('collegelogo'))
-        {
-           $input['collegelogo']= $this->filestore(Input::file('collegelogo'));
-        }
+        $input['dob'] = date('Y-m-d H:i:s', strtotime(Input::get('dob')));
 
+       $input['collegeid']=Auth::user()->collegeid;
+       $input['collegename']=Admin::where('collegeid','=',Auth::user()->collegeid)->first()->collegename;
+
+
+
+
+        //$input['collegeid']="dummy";
+        //$input['collegename']="dummy";
         $user = new User;
         $user->email=$input['email'];
         $user->password=Hash::make($input['password']);
         $user->collegeid=$input['collegeid'];
-        $user->flag=1;
+        $user->flag=3;
         $user->save();
         $input['loginid']=$user->id;
-
         $removed=array('_token','password','cpassword');
          foreach( $removed as $k )
            {   unset($input[$k]);
             }
 
-         Admin::saveFormData($input);
+
+         Student::saveFormData($input);
           return $input;
 
     }
@@ -55,7 +60,7 @@ class AdminController extends BaseController {
 
     public function filestore($file)
     {
-     $destinationPath= "/assets/images/admin";
+     $destinationPath= "/assets/images/student";
      $extension = $file->getClientOriginalExtension();
      $filename = str_random(4).".{$extension}";
      //$size = $file->getSize();

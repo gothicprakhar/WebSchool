@@ -16,12 +16,15 @@ Route::get('/foo', function()
 {
 	//return View::make('home');
     /*$user = new User;
-    $user->email="pankaj@gmail.com";
-    $user->password=Hash::makeHash::make("123456");
+    $user->email="sun";
+    $user->password=Hash::make("123456");
     $user->flag=1;
+    $user->collegeid='abf--qw';
     $user->save();*/
-    $admin = Admin::find(1);
-    return $admin->collegelogo;
+   // $ide=Auth::user()->collegeid;
+   // $admin = Admin::where('collegeid','=',Auth::user()->collegeid)->first()->collegename;
+     $admin=Classm::where('collegeid','=','bt123');
+    return $admin;
 
 
 });
@@ -78,4 +81,14 @@ Route::get('register', function(){
 
 return View::make('register');
 });
+Route::get('teacher', function(){
+
+return View::make('teacherreg');
+});
+Route::get('student', function(){
+
+    return View::make('studentreg');
+});
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
+Route::post('teacher', ['uses' => 'TeacherController@registerTeacher','as' => 'teacher_action']);
+Route::post('student', ['uses' => 'StudentController@registerStudent','as' => 'student_action']);
