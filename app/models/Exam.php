@@ -3,14 +3,14 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Staff extends Eloquent {
+class Exam extends Eloquent {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'staff';
+	protected $table = 'exams';
     public $timestamps = false;
 
 
@@ -28,7 +28,7 @@ class Staff extends Eloquent {
 	 */
     public static function saveFormData($data)
         {
-            DB::table('staff')->insert($data);
+            DB::table('exams')->insert($data);
         }
 
 
