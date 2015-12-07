@@ -15,8 +15,13 @@
 Route::get('/foo', function()
 {
 	//return View::make('home');
-    $user = User::find(1);
-    return $user->email;
+    /*$user = new User;
+    $user->email="pankaj@gmail.com";
+    $user->password=Hash::makeHash::make("123456");
+    $user->flag=1;
+    $user->save();*/
+    $admin = Admin::find(1);
+    return $admin->collegelogo;
 
 
 });
@@ -25,9 +30,6 @@ Route::get('/mam', array('as' => 'profile', function()
     return View::make('hello');
    
 }));
-
-
-
 
 
 Route::get('/', array('as' => 'home', function () {
@@ -48,10 +50,14 @@ Route::post('login', function () {
         'password' => Input::get('password')
     );
 
+           //$user =User::where('password', '=', Input::get('password'))->first();
+              // return $user;
 
+      //return (string)Auth::attempt($user);
     if (Auth::attempt($user)) {
-        return Redirect::route('home')
-            ->with('flash_notice', 'You are successfully logged in.');
+        //return Redirect::route('home') ->with('flash_notice', 'You are successfully logged in.');
+       $user= Auth::user();
+        return $user->email;
     }
 
     return Redirect::route('login')
@@ -68,3 +74,8 @@ Route::get('logout', array('as' => 'logout', function () {
 Route::get('profile', array('as' => 'profile', function () {
     return "profile page";
 }))->before('auth');
+Route::get('register', function(){
+
+return View::make('register');
+});
+Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
