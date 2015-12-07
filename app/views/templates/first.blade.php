@@ -85,11 +85,7 @@
              <main class="mdl-layout__content mdl-color--grey-100">
            @yield('page_content')
             </main>
-            <script type="text/javascript" src="./assets/js/jquery-2.1.4.min.js">
-            $(function(){
-
-});
-</script>
+            <script type="text/javascript" src="./assets/js/jquery-2.1.4.min.js"></script>
             @yield('page_footer')
     </div>
 </body>

@@ -84,23 +84,33 @@ class StudentController extends \BaseController {
 
     public function showStudent()
 	{
-        $data['flag'] = 0;
+        $data = array();
 
         $colid = Auth::user()->collegeid;
         $classes = Classes::where('collegeid', '=', $colid)->get();
 
-        $data['class'] = array();
+        $data['class'] = [];
         $i = 0;
-        foreach($classes as $cl) {
-            $data['class'][$i]['id'] = $cl->id;
-            $data['class'][$i]['name'] = $cl->class_name;
-            $i++;
+        for($i=0;$i<sizeof($classes);$i++){
+             $data['class'][$i]['id'] = $classes[$i]->id;
+            $data['class'][$i]['name'] = $classes[$i]->classname;
         }
 
-        var_dump($data['class']);
-        die();
-		return View::make('pages.student', ['data' => $data]);
+		return View::make('pages.student')->with('data', $data);
 	}
 
+    public function getStudentsData($classid)
+    {
+        $students = Student::where('classid', '=', $classid)->get();
 
+        $data['student'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($students);$i++){
+             $data['student'][$i]['pic'] = $students[$i]->profilepic;
+             $data['student'][$i]['name'] = $students[$i]->name;
+             $data['student'][$i]['rollno'] = $students[$i]->roll_no;
+             $data['student'][$i]['phone'] = $students[$i]->phone;
+        }
+        return json_encode($data['student']);
+    }
 }

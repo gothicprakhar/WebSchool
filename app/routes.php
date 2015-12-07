@@ -119,3 +119,7 @@ Route::get('register', function(){
 return View::make('register');
 });
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
+
+
+// Functionality starts here
+Route::get('/showstudents/{id}', 'StudentController@getStudentsData');
