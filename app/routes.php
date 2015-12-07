@@ -13,25 +13,36 @@
 
 Route::get('/',  function()
 {
-	return View::make('hello');
+    if (Auth::check()) {
+        return Redirect::route('dashboard')
+            ->with('flash_notice', 'You are successfully logged in.');
+    }
+       return View::make('login');
 });
 
-<<<<<<< HEAD
-=======
 Route::get('/dashboard',array(
     'as' =>'dashboard',
     'uses'=>'HomeController@showDashboard'
-));
+))->before('auth');
+
 
 Route::get('/student',array(
     'as' =>'student',
     'uses' =>'StudentController@showStudent'
 ));
+Route::get('student-new', function(){
+
+    return View::make('studentreg');
+})->before('auth');
 
 Route::get('/teacher',array(
     'as' =>'teacher',
     'uses' =>'TeacherController@showTeacher'
 ));
+Route::get('/teacher-new', function(){
+
+return View::make('teacherreg');
+})->before('auth');
 
 Route::get('/parent',array(
     'as' =>'parent',
@@ -94,9 +105,7 @@ Route::post('login', function () {
 
 
     if (Auth::attempt($user)) {
-
-       $user= Auth::user();
-        return $user->email;
+       return Redirect::route('dashboard');
     }
 
     return Redirect::route('login')
@@ -116,9 +125,12 @@ Route::get('logout', array('as' => 'logout', function () {
 Route::get('profile', array('as' => 'profile', function () {
     return "profile page";
 }))->before('auth');
-Route::get('register', function(){
+Route::get('admin-new', function(){
 
 return View::make('register');
 });
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
->>>>>>> origin/prakhar
+Route::post('teacher', ['uses' => 'TeacherController@createTeacher','as' => 'teacher_action']);
+Route::post('student', ['uses' => 'StudentController@createStudent','as' => 'student_action']);
+
+

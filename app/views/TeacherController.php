@@ -1,16 +1,26 @@
 <?php
 
-class TeacherController extends \BaseController {
+class TeacherController extends BaseController {
 
+	/*
+	|--------------------------------------------------------------------------
+	| Default Home Controller
+	|--------------------------------------------------------------------------
+	|
+	| You may wish to use controllers instead of, or in addition to, Closure
+	| based routes. That's great! Here is an example controller method to
+	| get you started. To route to this controller, just add the route:
+	|
+	|	Route::get('/', 'HomeController@showWelcome');
+	|
+	*/
 
+	public function showWelcome()
+	{
+		return View::make('hello');
+	}
 
-     public function showTeacher()
-
-     {
-		return View::make('pages.teacher');
-	  }
-
-    public function createTeacher()
+    public function registerTeacher()
     {
         $input = Input::all();
 
@@ -56,21 +66,5 @@ class TeacherController extends \BaseController {
       //echo $upload_success;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

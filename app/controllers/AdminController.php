@@ -22,8 +22,17 @@ class AdminController extends BaseController {
 
     public function registeradmin()
     {
-        //$input = new Array();
+
         $input = Input::all();
+        if (Input::hasFile('profilepic'))
+        {
+           $input['profilepic']= $this->filestore(Input::file('profilepic'));
+        }
+        if (Input::hasFile('collegelogo'))
+        {
+           $input['collegelogo']= $this->filestore(Input::file('collegelogo'));
+        }
+
         $user = new User;
         $user->email=$input['email'];
         $user->password=Hash::make($input['password']);
@@ -35,15 +44,26 @@ class AdminController extends BaseController {
         $removed=array('_token','password','cpassword');
          foreach( $removed as $k )
            {   unset($input[$k]);
-
-             }
+            }
 
          Admin::saveFormData($input);
-
-           return $input;
+          return $input;
 
     }
 
 
+
+    public function filestore($file)
+    {
+     $destinationPath= "/assets/images/admin";
+     $extension = $file->getClientOriginalExtension();
+     $filename = str_random(4).".{$extension}";
+     //$size = $file->getSize();
+     $upload_success = $file->move(public_path().'/'.$destinationPath, $filename);
+     $url=$destinationPath.'/'. $filename;
+      return $url;
+      //echo $upload_success;
+
+    }
 
 }
