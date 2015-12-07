@@ -81,9 +81,11 @@ class StudentController extends \BaseController {
 	{
 		//
 	}
-    public function showdstudent()
+
+    public function showStudent()
 	{
-		return View::make('pages.student');
+        $data['flag'] = 0;
+		return View::make('pages.student', ['data' => $data]);
 	}
 
 

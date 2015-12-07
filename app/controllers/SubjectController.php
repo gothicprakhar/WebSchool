@@ -81,9 +81,9 @@ class SubjectController extends \BaseController {
 	{
 		//
 	}
-    public function showsubject()
+    public function showSubject()
 	{
 		return View::make('pages.subject');
-
+    }
 
 }

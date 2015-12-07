@@ -81,7 +81,7 @@ class GradeController extends \BaseController {
 	{
 		//
 	}
-    public function showdgrade()
+    public function showGrade()
 	{
 		return View::make('pages.grade');
 	}

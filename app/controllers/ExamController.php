@@ -81,7 +81,7 @@ class ExamController extends \BaseController {
 	{
 		//
 	}
-    public function showdexam()
+    public function showExam()
 	{
 		return View::make('pages.exam');
 	}

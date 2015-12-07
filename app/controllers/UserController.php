@@ -82,9 +82,8 @@ class UserController extends \BaseController {
 		//
 	}
 
-
-}
- public function showduser()
+ public function showUser()
 	{
 		return View::make('pages.user');
 	}
+}

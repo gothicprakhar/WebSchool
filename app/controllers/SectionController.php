@@ -81,7 +81,7 @@ class SectionController extends \BaseController {
 	{
 		//
 	}
-    public function showdsection()
+    public function showsection()
 	{
 		return View::make('pages.section');
 	}

@@ -21,7 +21,7 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #C62828;">
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;">
   One &nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="demo-menu-lower-right">

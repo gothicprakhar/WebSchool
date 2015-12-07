@@ -81,7 +81,7 @@ class ParentController extends \BaseController {
 	{
 		//
 	}
-    public function showdparent()
+    public function showParent()
 	{
 		return View::make('pages.parent');
 	}

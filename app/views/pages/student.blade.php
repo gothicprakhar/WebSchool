@@ -3,10 +3,20 @@
 <title>Dashboard</title>
     <link href="./assets/css/dashboard.css" rel="stylesheet">
     <link href="./assets/css/panel.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+
 @stop
 
 @section('page_content')
 
+ <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
 
                      <div class="mdl-grid">
                          <div class="mdl-cell mdl-cell--1-col-desktop mdl-grid"></div>
@@ -19,13 +29,26 @@
                                <h2 class="mdl-card__title-text"><i class="material-icons" style="margin-left: 3em;">school</i>&nbsp;Students</h2>
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
-                               <!-- Accent-colored raised button with ripple -->
 
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5722;"> <span class="mdl-cell--hide-phone ">SELECT</span> CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+
+                               <md-input-container flex>
+          <label>State</label>
+          <md-select ng-model="user.state">
+            <md-option ng-repeat="state in states" value="abc">
+              abc
+            </md-option>
+          </md-select>
+        </md-input-container>
+
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;"> <span class="mdl-cell--hide-phone ">SELECT</span> CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                for="demo-menu-lower-right">
+                                for="demo-menu-lower-right" style="overflow: scroll;">
                               <li class="mdl-menu__item">One</li>
                               <li class="mdl-menu__item">Two</li>
+                              <li class="mdl-menu__item">Three</li>
+                              <li class="mdl-menu__item">Three</li>
+                              <li class="mdl-menu__item">Three</li>
                               <li class="mdl-menu__item">Three</li>
                             </ul>
 
@@ -43,8 +66,12 @@
                                 </div>
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
+
+                                          @if ($data['flag'] === 0)
                                           <br><br>
                                           <i>Please choose a class to view students.</i>
+
+                                          @else
                                <table  style="width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;" rules="rows" cellspacing="60">
                                   <tr>
                                     <th class="hide-mobile">No </th>
@@ -112,7 +139,7 @@
 
                                   </tr>
                                 </table>
-
+                                        @endif
 
                                           </center>
                                   </div>
@@ -151,7 +178,35 @@
 @section('page_footer')
     <script>
         $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+            angular
+  .module('inputBasicDemo', ['ngMaterial', 'ngMessages'])
+  .controller('DemoCtrl', function($scope) {
+    $scope.user = {
+      title: 'Developer',
+      email: 'ipsum@lorem.com',
+      firstName: '',
+      lastName: '',
+      company: 'Google',
+      address: '1600 Amphitheatre Pkwy',
+      city: 'Mountain View',
+      state: 'CA',
+      biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
+      postalCode: '94043'
+    };
+    $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+    'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+    'WY').split(' ').map(function(state) {
+        return {abbrev: state};
+      })
+  })
+  .config(function($mdThemingProvider) {
+    // Configure a dark theme with primary foreground yellow
+    $mdThemingProvider.theme('docs-dark', 'default')
+      .primaryPalette('yellow')
+      .dark();
+  });
+  $('[data-toggle="tooltip"]').tooltip();
+  $(".mdl-layout__content").animate({ scrollTop: $(".page-content").height() }, "slow");
 })
     </script>
 @stop

@@ -81,7 +81,7 @@ class TeacherController extends \BaseController {
 	{
 		//
 	}
-     public function showdteacher()
+     public function showTeacher()
 	{
 		return View::make('pages.teacher');
 	}
