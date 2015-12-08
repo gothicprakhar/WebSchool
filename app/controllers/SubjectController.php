@@ -81,9 +81,37 @@ class SubjectController extends \BaseController {
 	{
 		//
 	}
-    public function showSubject()
+public function showSubject()
 	{
-		return View::make('pages.subject');
-    }
+        $data = array();
 
+        $colid = Auth::user()->collegeid;
+        $classes = Classes::where('collegeid', '=', $colid)->get();
+
+        $data['class'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($classes);$i++){
+             $data['class'][$i]['id'] = $classes[$i]->id;
+            $data['class'][$i]['name'] = $classes[$i]->classname;
+        }
+
+		return View::make('pages.subject')->with('data', $data);
+	}
+
+    public function getSubjectsData($classid)
+    {$colid = Auth::user()->collegeid;
+
+     $subjects = Subject::whereRaw('collegeid = ? and classid = ?', array($colid, $classid))->get();
+
+
+        $data['subject'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($subjects);$i++){
+             $data['subject'][$i]['subjectname'] = $subjects[$i]->subjectname;
+             $data['subject'][$i]['subjectauthor'] = $subjects[$i]->subjectauthor;
+             $data['subject'][$i]['subjectcode'] = $subjects[$i]->subjectcode;
+             $data['subject'][$i]['subjectteacher'] = $subjects[$i]->subjectteacher;
+        }
+        return json_encode($data['subject']);
+    }
 }

@@ -3,19 +3,6 @@
 class StudentController extends \BaseController {
 
 
-    public function showStudent()
-	{
-
-        $data['flag'] = 0;
-
-        $colid = Auth::user()->collegeid;
-        $classes = Classes::where('collegeid', '=', $colid)->get();
-
-        $data['class'] = array();
-        $i = 0;
-
-		return View::make('pages.student', ['data' => $data]);
-	}
 
     public function createStudent()
     {
@@ -47,10 +34,41 @@ class StudentController extends \BaseController {
            {   unset($input[$k]);
             }
 
-
          Student::saveFormData($input);
           return $input;
+    }
 
+    public function showStudent()
+	{
+        $data = array();
+        $colid = Auth::user()->collegeid;
+        $classes = Classes::where('collegeid', '=', $colid)->get();
+        $data['class'] = [];
+
+        $i = 0;
+        for($i=0;$i<sizeof($classes);$i++){
+             $data['class'][$i]['id'] = $classes[$i]->id;
+            $data['class'][$i]['name'] = $classes[$i]->classname;
+        }
+
+		return View::make('pages.student')->with('data', $data);
+	}
+
+
+    public function getStudentsData($classid)
+    {
+       $colid = Auth::user()->collegeid;
+        $students = Student::whereRaw('collegeid = ? and classid = ?', array($colid, $classid))->get();
+
+        $data['student'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($students);$i++){
+             $data['student'][$i]['pic'] = $students[$i]->profilepic;
+             $data['student'][$i]['name'] = $students[$i]->name;
+             $data['student'][$i]['rollno'] = $students[$i]->roll_no;
+             $data['student'][$i]['phone'] = $students[$i]->phone;
+        }
+        return json_encode($data['student']);
     }
 
     public function filestore($file)
@@ -65,7 +83,6 @@ class StudentController extends \BaseController {
       //echo $upload_success;
 
     }
-
 
 
 

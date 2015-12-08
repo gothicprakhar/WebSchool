@@ -2,6 +2,8 @@
 @section('page_head')
 <title>Dashboard</title>
     <link href="./assets/css/dashboard.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+
 @stop
 
 @section('page_content')
@@ -19,13 +21,15 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
                                <!-- Accent-colored raised button with ripple -->
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;">
-  One &nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
-</button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                                for="demo-menu-lower-right">
-                              <li class="mdl-menu__item">One</li>
-                              <li class="mdl-menu__item">Two</li>
-                              <li class="mdl-menu__item">Three</li>
+
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;"> <span class="mdl-cell--hide-phone"  >SELECT</span>&nbsp;CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+
+</button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"  for="demo-menu-lower-right" style="height: 10em;overflow: scroll; ">
+                               @for($i=0;$i<sizeof($data['class']);$i++)
+                                               <li class="mdl-menu__item" onclick="showsubjects({{$data['class'][$i]['id']}})">
+                                {{$data['class'][$i]['name']}}
+                                                </li>
+                                @endfor
                             </ul>
 
                           </div>
@@ -37,10 +41,16 @@
 <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
                               &nbsp; &nbsp;<i class="material-icons">add</i>
                             </button>
+                                  <div class="mdl-tooltip" for="tt1">
+                                Add a student
+                                </div>
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
-
-                               <table style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
+ <div id="showtable">
+                                           <br><br>
+                                          <i>Please choose a class to view subjects.</i>
+                                          </div>
+                              <!-- <table style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
                                   <tr>
                                     <th>No <hr></th>
                                     <th>Subject Name<hr></th>
@@ -93,7 +103,7 @@
                                   <td> <button class="btn btn-sm btn-warning" style="font-size: 0.65em;"><span class="glyphicon glyphicon-edit"></span></button>
                                     <button class="btn btn-sm btn-danger" style="font-size: 0.65em;"><span class="glyphicon glyphicon-trash"></span></button></td>
                                   </tr>
-                                </table>
+                                </table>-->
 
 
                                           </center>
@@ -131,6 +141,52 @@
 @stop
 
 @section('page_footer')
-    <script type="text/javascript">
+    <script>
+        function showsubjects(classid) {
+            //console.log(classid);
+            var url = "/showsubjects/"+classid;
+            //console.log(url);
+            $.ajax({
+              'url': url,
+              'type': 'GET',
+              'contentType': 'text/html',
+              async: false,
+              success: function (e) {
+                 //console.log(e);
+                  var f = jQuery.parseJSON(e);
+                  //console.log(f);
+                  var arr = $.map(f, function(el) { return el; })
+
+                  var tbhtml = "<table  style=\"width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;\" rules=\"rows\" cellspacing=\"60\"><tr><th class=\"hide-mobile\">No </th><th>Subject Name </th><th>Subject Author </th><th>Teacher </th><th class=\"hide-mobile\">Subject Code </th><th >Action </th> </tr>";
+
+                  for(var i = 0; i < arr.length; i++) {
+                      tbhtml += "<tr><td class=\"hide-mobile\">";
+                      tbhtml += (i+1);
+                      tbhtml += "</td>";
+                      tbhtml += "<td>";
+                      tbhtml += arr[i].subjectname;
+                      tbhtml += "</td>";
+                      tbhtml += "<td>";
+                      tbhtml += arr[i].subjectauthor;
+                      tbhtml += "</td>";
+                      tbhtml += "<td class=\"hide-mobile\">";
+                      tbhtml += arr[i].subjectteacher;
+                      tbhtml += "</td>"
+                      tbhtml += "<td>";
+                      tbhtml += arr[i].subjectcode;
+                      tbhtml += "</td>";
+                      tbhtml += "<td><i class=\"material-icons mdl-color-text--green-400\" style=\"font-size: 1.1em;\">launch </i>&nbsp;<i class=\"material-icons mdl-color-text--blue-400\" style=\"font-size: 1.1em;\">mode_edit </i>&nbsp;<i class=\"material-icons mdl-color-text--red-400\"style=\"font-size: 1.1em;\">delete</i></td>";
+                      tbhtml += "</tr>";
+                  }
+                  $('#showtable').html(tbhtml);
+                console.log(tbhtml);
+              },
+              error: function (g) {
+              console.log(g);
+              },
+              cache: false,
+              processData: false
+          });
+        }
     </script>
 @stop

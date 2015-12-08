@@ -29,7 +29,7 @@ Route::get('/dashboard',array(
 Route::get('/student',array(
     'as' =>'student',
     'uses' =>'StudentController@showStudent'
-));
+))->before('auth');
 Route::get('student-new', function(){
 
     return View::make('studentreg');
@@ -38,7 +38,7 @@ Route::get('student-new', function(){
 Route::get('/teacher',array(
     'as' =>'teacher',
     'uses' =>'TeacherController@showTeacher'
-));
+))->before('auth');
 Route::get('/teacher-new', function(){
 
 return View::make('teacherreg');
@@ -47,43 +47,35 @@ return View::make('teacherreg');
 Route::get('/parent',array(
     'as' =>'parent',
     'uses' => 'ParentController@showParent'
-));
+))->before('auth');
 
 Route::get('/user',array(
     'as' =>'user',
     'uses' => 'UserController@showUser'
-));
+))->before('auth');
 
 Route::get('/subject',array(
     'as' =>'subject',
     'uses' => 'SubjectController@showSubject'
-));
+))->before('auth');
 
 Route::get('/grade',array(
     'as' =>'grade',
     'uses' => 'GradeController@showGrade'
-));
+))->before('auth');
 
 Route::get('/exam',array(
     'as' =>'exam',
     'uses' => 'ExamController@showExam'
-));
+))->before('auth');
 
 Route::get('/section',array(
     'as' =>'section',
     'uses' => 'SectionController@showSection'
-));
-
-Route::get('/abc', function() {
-    return View::make('pages.abc');
-});
+))->before('auth');
 
 
-Route::get('/mam', array('as' => 'profile', function()
-{
-    return View::make('hello');
 
-}));
 
 
 
@@ -114,8 +106,8 @@ Route::post('login', function () {
 });
 Route::get('/foo', function() {
     $user = User::find(1);
-    //return Auth::user()->collegeid;
-    return trans('gre.welcome');
+    return Auth::user()->collegeid;
+   // return trans('gre.welcome');
 
 
 
@@ -123,6 +115,7 @@ Route::get('/foo', function() {
 
 
 });
+
 Route::get('logout', array('as' => 'logout', function () {
     Auth::logout();
     return Redirect::route('login')
@@ -132,12 +125,21 @@ Route::get('logout', array('as' => 'logout', function () {
 Route::get('profile', array('as' => 'profile', function () {
     return "profile page";
 }))->before('auth');
+
 Route::get('admin-new', function(){
 
 return View::make('register');
-});
+})->before('auth');
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
 Route::post('teacher', ['uses' => 'TeacherController@createTeacher','as' => 'teacher_action']);
 Route::post('student', ['uses' => 'StudentController@createStudent','as' => 'student_action']);
 Route::get('/testtable', ['uses' => 'AttendenceController@showWelcome','as' => 'table_action']);
+
+
+
+// Functionality starts here
+Route::get('/showstudents/{id}', 'StudentController@getStudentsData');
+Route::get('/showteachers/{id}', 'TeacherController@getTeachersData');
+Route::get('/showsubjects/{id}', 'SubjectController@getSubjectsData');
+Route::get('/showparents/{id}', 'ParentController@getParentsData');
 

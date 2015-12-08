@@ -42,8 +42,6 @@
                                 </div>
                                   <div class="mdl-cell mdl-cell--12-col" style="margin-bottom: 0em;">
                                       <center>
-                                          <br><br>
-                                          <i>Please choose a class to view students.</i>
 
                                <table  style="width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;" rules="rows" cellspacing="60">
                                   <tr>

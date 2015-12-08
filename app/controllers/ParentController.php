@@ -81,10 +81,38 @@ class ParentController extends \BaseController {
 	{
 		//
 	}
-    public function showParent()
+  public function showParent()
 	{
-		return View::make('pages.parent');
+        $data = array();
+
+        $colid = Auth::user()->collegeid;
+        $classes = Classes::where('collegeid', '=', $colid)->get();
+
+        $data['class'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($classes);$i++){
+             $data['class'][$i]['id'] = $classes[$i]->id;
+            $data['class'][$i]['name'] = $classes[$i]->classname;
+        }
+
+		return View::make('pages.parent')->with('data', $data);
 	}
 
+    public function getParentsData($classid)
+    {
+       $colid = Auth::user()->collegeid;
+        $students = Student::whereRaw('collegeid = ? and classid = ?', array($colid, $classid))->get();
 
+
+        $data['student'] = [];
+        $i = 0;
+        for($i=0;$i<sizeof($students);$i++){
+             $data['student'][$i]['fathername'] = $students[$i]->fathername;
+             $data['student'][$i]['mothername'] = $students[$i]->mothername;
+             $data['student'][$i]['fphone'] = $students[$i]->fphone;
+             $data['student'][$i]['femail'] = $students[$i]->femail;
+             $data['student'][$i]['name'] = $students[$i]->name;
+        }
+        return json_encode($data['student']);
+    }
 }
