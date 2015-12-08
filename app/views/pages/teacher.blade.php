@@ -179,6 +179,9 @@
                       tbhtml += arr[i].name;
                       tbhtml += "</td>";
                       tbhtml += "<td>";
+                      tbhtml += arr[i].email;
+                      tbhtml += "</td>";
+                      tbhtml += "<td>";
                       tbhtml += arr[i].rollno;
                       tbhtml += "</td>";
                       tbhtml += "<td class=\"hide-mobile\">";
