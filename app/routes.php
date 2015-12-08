@@ -114,7 +114,14 @@ Route::post('login', function () {
 });
 Route::get('/foo', function() {
     $user = User::find(1);
-    return Auth::user()->collegeid;
+    //return Auth::user()->collegeid;
+    return trans('gre.welcome');
+
+
+
+
+
+
 });
 Route::get('logout', array('as' => 'logout', function () {
     Auth::logout();
