@@ -174,9 +174,9 @@
 
                   var tbhtml = "<table  style=\"width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;\" rules=\"rows\" cellspacing=\"60\"><tr><th class=\"hide-mobile\">No </th><th>Photo </th><th>Name </th><th>Roll No </th><th class=\"hide-mobile\">Phone </th><th >Action </th> </tr>";
 
-                  for(var i = 1; i < arr.length; i++) {
+                  for(var i = 0; i < arr.length; i++) {
                       tbhtml += "<tr><td class=\"hide-mobile\">";
-                      tbhtml += i;
+                      tbhtml += (i+1);
                       tbhtml += "</td><td><div class=\"section__circle-container__circle mdl-color--primary\"></td>";
                       tbhtml += "<td>";
                       tbhtml += arr[i].name;
