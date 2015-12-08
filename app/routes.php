@@ -44,6 +44,10 @@ Route::get('/teacher-new', function(){
 return View::make('teacherreg');
 })->before('auth');
 
+Route::get('admin-new', function(){
+    return View::make('adminreg');
+})->before('auth');
+
 Route::get('/parent',array(
     'as' =>'parent',
     'uses' => 'ParentController@showParent'
@@ -75,12 +79,6 @@ Route::get('/section',array(
 ))->before('auth');
 
 
-
-
-
-
-
-
 Route::get('login', array('as' => 'login', function () {
     if (Auth::check()) {
         return Redirect::route('home')
@@ -95,7 +93,6 @@ Route::post('login', function () {
         'password' => Input::get('password')
     );
 
-
     if (Auth::attempt($user)) {
        return Redirect::route('dashboard');
     }
@@ -103,17 +100,6 @@ Route::post('login', function () {
     return Redirect::route('login')
         ->with('flash_error', 'Your username/password combination was incorrect.')
         ->withInput();
-});
-Route::get('/foo', function() {
-    $user = User::find(1);
-    return Auth::user()->collegeid;
-   // return trans('gre.welcome');
-
-
-
-
-
-
 });
 
 Route::get('logout', array('as' => 'logout', function () {
@@ -126,10 +112,12 @@ Route::get('profile', array('as' => 'profile', function () {
     return "profile page";
 }))->before('auth');
 
-Route::get('admin-new', function(){
+Route::get('/foo', function() {
+    $user = User::find(1);
+    return Auth::user()->collegeid;
+});
 
-return View::make('register');
-})->before('auth');
+//Register forms
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
 Route::post('teacher', ['uses' => 'TeacherController@createTeacher','as' => 'teacher_action']);
 Route::post('student', ['uses' => 'StudentController@createStudent','as' => 'student_action']);
