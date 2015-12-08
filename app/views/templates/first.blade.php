@@ -70,7 +70,7 @@
 
 
             <a class="mdl-navigation__link" href="{{URL::route('user')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >group</i><span style="margin-left: 2.5em;"> User</span> </a>
-          <a class="mdl-navigation__link" href="{{URL::route('section')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >kitchen</i><span style="margin-left: 2.5em;">  Section</span> </a>
+     <!--     <a class="mdl-navigation__link" href="{{URL::route('section')}}"style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >kitchen</i><span style="margin-left: 2.5em;">  Section</span> </a>-->
 
          <a class="mdl-navigation__link" href="{{URL::route('subject')}}" style="padding-top: 1em;"><i class="mdl-color-text--blue-grey-400 material-icons" style="position: absolute; margin-top: -0.1em;" >subject</i><span style="margin-left: 2.5em;"> Subject</span> </a>
 

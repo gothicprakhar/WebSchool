@@ -123,3 +123,6 @@ Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'regi
 
 // Functionality starts here
 Route::get('/showstudents/{id}', 'StudentController@getStudentsData');
+Route::get('/showteachers/{id}', 'TeacherController@getTeachersData');
+Route::get('/showsubjects/{id}', 'SubjectController@getSubjectsData');
+Route::get('/showparents/{id}', 'ParentController@getParentsData');
