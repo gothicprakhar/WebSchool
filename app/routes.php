@@ -139,5 +139,5 @@ return View::make('register');
 Route::post('register', ['uses' => 'AdminController@registeradmin','as' => 'register_action']);
 Route::post('teacher', ['uses' => 'TeacherController@createTeacher','as' => 'teacher_action']);
 Route::post('student', ['uses' => 'StudentController@createStudent','as' => 'student_action']);
-
+Route::get('/testtable', ['uses' => 'AttendenceController@showWelcome','as' => 'table_action']);
 
