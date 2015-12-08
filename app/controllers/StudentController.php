@@ -101,7 +101,9 @@ class StudentController extends \BaseController {
 
     public function getStudentsData($classid)
     {
-        $students = Student::where('classid', '=', $classid)->get();
+       $colid = Auth::user()->collegeid;
+        $students = Student::whereRaw('collegeid = ? and classid = ?', array($colid, $classid))->get();
+
 
         $data['student'] = [];
         $i = 0;

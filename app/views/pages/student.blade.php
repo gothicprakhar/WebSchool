@@ -21,7 +21,7 @@
                                 <div class="mdl-layout-spacer"></div><br>
                             <!-- Right aligned menu below button -->
 
-                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;"> <span class="mdl-cell--hide-phone ">SELECT</span> CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
+                             <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" style="margin-top: 6em; background-color: #FF5252;"> <span class="mdl-cell--hide-phone"  >SELECT</span>&nbsp;CLASS&nbsp; <span class="glyphicon glyphicon-menu-down" style="margin-top: 0.2em;"></span>
 
 </button>     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                                 for="demo-menu-lower-right" style="height: 10em;overflow: scroll; ">
@@ -174,9 +174,9 @@
 
                   var tbhtml = "<table  style=\"width: 95%; margin-top: 3em; line-height: 5em; font-size: 1.1em;\" rules=\"rows\" cellspacing=\"60\"><tr><th class=\"hide-mobile\">No </th><th>Photo </th><th>Name </th><th>Roll No </th><th class=\"hide-mobile\">Phone </th><th >Action </th> </tr>";
 
-                  for(var i = 1; i < arr.length; i++) {
+                  for(var i = 0; i < arr.length; i++) {
                       tbhtml += "<tr><td class=\"hide-mobile\">";
-                      tbhtml += i;
+                      tbhtml += (i+1);
                       tbhtml += "</td><td><div class=\"section__circle-container__circle mdl-color--primary\"></td>";
                       tbhtml += "<td>";
                       tbhtml += arr[i].name;
@@ -187,7 +187,7 @@
                       tbhtml += "<td class=\"hide-mobile\">";
                       tbhtml += arr[i].phone;
                       tbhtml += "</td>"
-                      tbhtml += "<td><i class=\"material-icons mdl-color-text--green-400\" style=\"font-size: 1.1em;\">launch </i><i class=\"material-icons mdl-color-text--blue-400\" style=\"font-size: 1.1em;\">mode_edit </i><i class=\"material-icons mdl-color-text--red-400\"style=\"font-size: 1.1em;\">delete</i></td>";
+                      tbhtml += "<td><i class=\"material-icons mdl-color-text--green-400\" style=\"font-size: 1.1em;\">launch </i>&nbsp;<i class=\"material-icons mdl-color-text--blue-400\" style=\"font-size: 1.1em;\">mode_edit </i>&nbsp;<i class=\"material-icons mdl-color-text--red-400\"style=\"font-size: 1.1em;\">delete</i></td>";
                       tbhtml += "</tr>";
                   }
                   $('#showtable').html(tbhtml);
