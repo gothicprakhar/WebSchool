@@ -119,7 +119,6 @@
 
                                   </tr>
                                 </table>-->
->>>>>>> origin/prakhar
 
 
                                           </center>
@@ -184,9 +183,6 @@
                       tbhtml += "</td>";
                       tbhtml += "<td>";
                       tbhtml += arr[i].email;
-                      tbhtml += "</td>";
-                      tbhtml += "<td>";
-                      tbhtml += arr[i].rollno;
                       tbhtml += "</td>";
                       tbhtml += "<td class=\"hide-mobile\">";
                       tbhtml += arr[i].phone;

@@ -48,7 +48,7 @@
                                       <center>
  <div id="showtable">
                                            <br><br>
-                                          <i>Please choose a class to view students.</i>
+                                          <i>Please choose a class to view subjects.</i>
                                           </div>
                               <!-- <table style="width: 95%; margin-top: 3em; line-height: 2em; font-size: 1.1em;">
                                   <tr>
