@@ -22,6 +22,11 @@ class AdminController extends BaseController {
 
     public function registeradmin()
     {
+        $validator=$this->validateAdmin(Input::all());
+            if ($validator->fails()) {
+                $messages = $validator->messages();
+                return Redirect::to('adminform')->withErrors($messages)->withInput(Input::except('password', 'password_confirmation'));
+            }
 
         $input = Input::all();
         if (Input::hasFile('profilepic'))
@@ -41,7 +46,7 @@ class AdminController extends BaseController {
         $user->save();
         $input['loginid']=$user->id;
 
-        $removed=array('_token','password','cpassword');
+        $removed=array('_token','password','password_confirmation');
          foreach( $removed as $k )
            {   unset($input[$k]);
             }
@@ -50,8 +55,6 @@ class AdminController extends BaseController {
           return $input;
 
     }
-
-
 
     public function filestore($file)
     {
@@ -65,5 +68,32 @@ class AdminController extends BaseController {
       //echo $upload_success;
 
     }
+
+     public function validateAdmin()
+        {
+
+            $rules = array(
+            'name' => 'Required|Min:3|Max:80|Alpha',
+            'email'     => 'Required|Between:3,64|Email|Unique:users',
+            'gender' => 'Required',
+            'dob' =>'date_format:"m/d/Y"',
+            'phone' =>'Required|Numeric|Digits_Between:10,14',
+            'collegename' => 'Required|Min:3|Max:80|AlphaNum',
+            'collegeid' => 'Required|Min:3|Max:80|AlphaNum|Unique:users',
+            'collegelogo' =>'Image',
+            'religion' => 'Required|Min:3|Max:80|Alpha',
+            'password'  => 'Required|AlphaNum|Between:4,8|Confirmed',
+            'password_confirmation'=>'Required|AlphaNum|Between:4,8',
+            'profilepic' =>'Image'
+             );
+
+             $validator= Validator::make(Input::all(), $rules);
+             return $validator;
+
+
+
+        }
+
+
 
 }

@@ -37,8 +37,9 @@
 
                               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
+<button onclick="addTeacher()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;" >
                               &nbsp; &nbsp;<i class="material-icons">add</i>
+
                             </button>
                                   <div class="mdl-tooltip" for="tt1">
                                 Add a student
@@ -199,6 +200,9 @@
               cache: false,
               processData: false
           });
+        }
+        function addTeacher(){
+            window.location="{{URL::route('newteacher')}}"
         }
     </script>
 @stop

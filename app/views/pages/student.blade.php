@@ -38,7 +38,7 @@
 
                               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
 
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="tt1" style="margin-top: -1.5em; z-index: 999;  position: absolute;margin-left: 1em;" onclick="addstudent()">
                               &nbsp; &nbsp;<i class="material-icons">add</i>
                             </button>
                                   <div class="mdl-tooltip" for="tt1">
@@ -177,7 +177,9 @@
                   for(var i = 0; i < arr.length; i++) {
                       tbhtml += "<tr><td class=\"hide-mobile\">";
                       tbhtml += (i+1);
-                      tbhtml += "</td><td><div class=\"section__circle-container__circle mdl-color--primary\"></td>";
+                      tbhtml += "</td><td><div class=\"section__circle-container__circle mdl-color--primary\" <img src=\"";
+                      tbhtml += arr[i].pic ;
+                      tbhtml+= "\"/></td>";
                       tbhtml += "<td>";
                       tbhtml += arr[i].name;
                       tbhtml += "</td>";
@@ -199,6 +201,9 @@
               cache: false,
               processData: false
           });
+        }
+        function addstudent(){
+            window.location="{{URL::route('newstudent')}}"
         }
     </script>
 @stop
